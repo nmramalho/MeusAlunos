@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Meus Alunos</string>
+    <string name="lista_de_alunos">Lista de Alunos</string>
+    <string name="novo_aluno">Novo Aluno</string>
+    <string name="msg_boas_vindas">Exemplo de uma aplicação para registar dados de alunos</string>
+    <string name="numero">Número</string>
+    <string name="nome">Nome</string>
+    <string name="turma">Turma</string>
+    <string name="guardar">Guardar</string>
+</resources>
