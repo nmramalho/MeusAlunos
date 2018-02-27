@@ -13,8 +13,13 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
+    /**
+     * Método para abrir a interface relativa à activity NovoAlunoActivity
+     * @param view Objeto View que foi clicado
+     */
     public void AbrirInterfaceNovoAluno(View view){
         Intent intent = new Intent(this, NovoAlunoActivity.class);
         startActivity(intent);
     }
+
 }
