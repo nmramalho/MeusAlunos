@@ -1,3 +1,5 @@
+package com.a550nmr.meusalunos;
+
 /**
  * Created by ramal on 07/03/2018.
  */
@@ -5,7 +7,7 @@
 public class Aluno {
 
     private long Id;
-    private String numero;
+    private long numero;
     private String nome;
     private String turma;
 
@@ -13,15 +15,31 @@ public class Aluno {
         return Id;
     }
 
+    public Aluno() {
+    }
+
+    public Aluno(long id, long numero, String nome, String turma) {
+        Id = id;
+        this.numero = numero;
+        this.nome = nome;
+        this.turma = turma;
+    }
+
+    public Aluno(long numero, String nome, String turma) {
+        this.numero = numero;
+        this.nome = nome;
+        this.turma = turma;
+    }
+
     public void setId(long id) {
         Id = id;
     }
 
-    public String getNumero() {
+    public long getNumero() {
         return numero;
     }
 
-    public void setNumero(String numero) {
+    public void setNumero(long numero) {
         this.numero = numero;
     }
 
