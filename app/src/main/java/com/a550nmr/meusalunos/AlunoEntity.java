@@ -1,37 +1,31 @@
 package com.a550nmr.meusalunos;
 
+import android.arch.persistence.room.ColumnInfo;
+import android.arch.persistence.room.Entity;
+import android.arch.persistence.room.PrimaryKey;
+
 /**
- * Created by ramal on 07/03/2018.
+ * Created by ramal on 13/03/2018.
  */
+@Entity(tableName = "Aluno")
+public class AlunoEntity {
+    @PrimaryKey(autoGenerate = true)
+    private int id;
 
-public class Aluno {
-
-    private long id;
+    @ColumnInfo(name = "numero")
     private int numero;
+
+    @ColumnInfo(name = "nome")
     private String nome;
+
+    @ColumnInfo(name = "turma")
     private String turma;
 
-    public long getId() {
+    public int getId() {
         return id;
     }
 
-    public Aluno() {
-    }
-
-    public Aluno(long id, int numero, String nome, String turma) {
-        this.id = id;
-        this.numero = numero;
-        this.nome = nome;
-        this.turma = turma;
-    }
-
-    public Aluno(int numero, String nome, String turma) {
-        this.numero = numero;
-        this.nome = nome;
-        this.turma = turma;
-    }
-
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
 
