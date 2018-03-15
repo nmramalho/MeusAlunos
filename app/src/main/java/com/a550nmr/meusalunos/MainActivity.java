@@ -22,4 +22,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void AbrirInterfaceListaAlunos(View view) {
+        Intent intent = new Intent(this, ListaAlunosActivity.class);
+        startActivity(intent);
+    }
+
 }
