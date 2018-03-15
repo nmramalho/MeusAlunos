@@ -26,8 +26,8 @@ public class AlunoRepository {
     }
 
 
-    public void insert (AlunoEntity word) {
-        new insertAsyncTask(alunoDAO).execute(word);
+    public void insert (AlunoEntity alunoEntity) {
+        new insertAsyncTask(alunoDAO).execute(alunoEntity);
     }
 
 
