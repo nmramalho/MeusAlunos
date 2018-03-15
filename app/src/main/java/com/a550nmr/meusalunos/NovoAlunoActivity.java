@@ -1,5 +1,6 @@
 package com.a550nmr.meusalunos;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.arch.persistence.room.Room;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,17 +15,18 @@ public class NovoAlunoActivity extends AppCompatActivity {
 
     private AppDatabase appDatabase;
 
+    private AlunoViewModel alunoViewModel;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_novo_aluno);
 
-        // Observação: As referencias à base de dados não devem estar dentro de uma Activity
-        //             Colocamos aqui para facilitar o exemplo
-        appDatabase = Room.databaseBuilder(this, AppDatabase.class, "db-alunos")
-                .allowMainThreadQueries()   //permite o funcionanemnto de Room na main thread
-                .build();
+        // Get a new or existing ViewModel from the ViewModelProvider.
+        alunoViewModel = ViewModelProviders.of(this).get(AlunoViewModel.class);
     }
+
+
 
     public void GuardarNovoAluno(View view) {
 
@@ -56,13 +58,19 @@ public class NovoAlunoActivity extends AppCompatActivity {
         alunoEntity.setNome(aluno.getNome());
         alunoEntity.setTurma(aluno.getTurma());
 
-        AlunoDAO alunoDAO = appDatabase.alunoDAO();
-        alunoDAO.insert(alunoEntity);
+
+
+        alunoViewModel.insert(alunoEntity);
+
+
 
 
         // verificar em log os alunos introduzidos
 
-        List<AlunoEntity> alunoEntities = alunoDAO.getAlunos();
+       /* AlunoDAO alunoDAO = appDatabase.alunoDAO();
+        alunoDAO.insert(alunoEntity);*/
+
+      /*  List<AlunoEntity> alunoEntities = alunoViewModel.getTodosAlunos().getValue();
 
 
         Log.d("NovoAlunoActivity"," ------  LISTA DE ALUNOS ---------");
@@ -75,6 +83,6 @@ public class NovoAlunoActivity extends AppCompatActivity {
                         );
         }
 
-        Log.d("NovoAlunoActivity"," --------------------------------------");
+        Log.d("NovoAlunoActivity"," --------------------------------------");*/
     }
 }
