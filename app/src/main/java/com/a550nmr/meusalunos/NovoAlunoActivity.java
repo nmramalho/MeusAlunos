@@ -26,8 +26,6 @@ public class NovoAlunoActivity extends AppCompatActivity {
         alunoViewModel = ViewModelProviders.of(this).get(AlunoViewModel.class);
     }
 
-
-
     public void GuardarNovoAluno(View view) {
 
         // aceder aos elementos do layout
@@ -58,31 +56,8 @@ public class NovoAlunoActivity extends AppCompatActivity {
         alunoEntity.setNome(aluno.getNome());
         alunoEntity.setTurma(aluno.getTurma());
 
-
-
         alunoViewModel.insert(alunoEntity);
 
 
-
-
-        // verificar em log os alunos introduzidos
-
-       /* AlunoDAO alunoDAO = appDatabase.alunoDAO();
-        alunoDAO.insert(alunoEntity);*/
-
-      /*  List<AlunoEntity> alunoEntities = alunoViewModel.getTodosAlunos().getValue();
-
-
-        Log.d("NovoAlunoActivity"," ------  LISTA DE ALUNOS ---------");
-
-        for (AlunoEntity alunoE : alunoEntities){
-            Log.d("NovoAlunoActivity", " -> " + Long.toString(alunoE.getId())
-                                                + " / " + Integer.toString(alunoE.getNumero())
-                                                + " / " + alunoE.getNome()
-                                                + " / " + alunoE.getTurma()
-                        );
-        }
-
-        Log.d("NovoAlunoActivity"," --------------------------------------");*/
     }
 }
