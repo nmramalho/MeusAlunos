@@ -5,6 +5,6 @@ Exemplo (criado para as aulas de Cursos Profissionais de Informática) de uma ap
 * Interface principal com dois botões.
 * Iniciar outras activities e respetivas interfaces.
 * Interface secundária para introdução de dados.
-* Interface secundária para listagem de dados formulário (Utilizando RecyclerView).
+* Interface secundária para listagem de dados (Utilizando RecyclerView).
 
 
