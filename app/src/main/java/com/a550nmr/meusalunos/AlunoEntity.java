@@ -21,6 +21,9 @@ public class AlunoEntity {
     @ColumnInfo(name = "turma")
     private String turma;
 
+   public AlunoEntity() {
+    }
+
     public int getId() {
         return id;
     }

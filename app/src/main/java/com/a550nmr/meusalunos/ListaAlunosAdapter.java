@@ -32,12 +32,8 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<ListaAlunosAdapter.
         }
     }
 
-
-
     private final LayoutInflater mInflater;
     private List<AlunoEntity> alunoEntities; // Dados em cache
-
-
 
     ListaAlunosAdapter(Context context) {
         mInflater = LayoutInflater.from(context);
@@ -50,15 +46,13 @@ public class ListaAlunosAdapter extends RecyclerView.Adapter<ListaAlunosAdapter.
         return new AlunoViewHolder(itemView);
     }
 
-
-
     @Override
     public void onBindViewHolder(AlunoViewHolder holder, int position) {
 
         if (alunoEntities != null) {
             AlunoEntity alunoEntity = alunoEntities.get(position);
             holder.txtId.setText(String.valueOf(alunoEntity.getId()));
-            holder.txtNumero.setText(String.valueOf(alunoEntity.getId()));
+            holder.txtNumero.setText(String.valueOf(alunoEntity.getNumero()));
             holder.txtNome.setText(alunoEntity.getNome());
             holder.txtTurma.setText(alunoEntity.getTurma());
 

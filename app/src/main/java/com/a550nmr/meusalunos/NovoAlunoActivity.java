@@ -1,19 +1,15 @@
 package com.a550nmr.meusalunos;
 
 import android.arch.lifecycle.ViewModelProviders;
-import android.arch.persistence.room.Room;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.util.List;
-
 public class NovoAlunoActivity extends AppCompatActivity {
 
-    private AppDatabase appDatabase;
+    //private AppDatabase appDatabase;
 
     private AlunoViewModel alunoViewModel;
 

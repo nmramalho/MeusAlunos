@@ -2,26 +2,17 @@ package com.a550nmr.meusalunos;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
-import android.arch.persistence.room.Room;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.widget.ListView;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class ListaAlunosActivity extends AppCompatActivity {
 
-    private ListView listView;
-    private AppDatabase appDatabase;
-    private List<AlunoEntity> listAlunoEntity;
-    private AlunoDAO alunoDAO;
-
     private AlunoViewModel alunoViewModel;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
